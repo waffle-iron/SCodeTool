@@ -7,7 +7,7 @@ package br.edu.cm.utfpr.scodetool.entities.generics;
  * @author Paulo
  *
  */
-public class Source {
+public class SourceCode {
     private String className;
     private String packageName;
     /**

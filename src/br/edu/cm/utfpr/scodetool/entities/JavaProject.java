@@ -10,8 +10,6 @@ import br.edu.cm.utfpr.scodetool.entities.generics.Project;
  *
  */
 public class JavaProject extends Project {
- 
- 
     
     
 }
