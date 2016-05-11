@@ -4,13 +4,13 @@
 package br.edu.cm.utfpr.scodetool.entities;
 
 import java.util.ArrayList;
-
+import br.edu.cm.utfpr.scodetool.entities.generics.Package;
 /**
  * @author Paulo
  *
  */
-public class JavaPackage {
-	private String namePackage;
+public class JavaPackage extends Package {
+	
 	private ArrayList<JavaClass> classes;
 	
 	/**
@@ -27,19 +27,6 @@ public class JavaPackage {
 		this.classes = classes;
 	}
 
-	/**
-	 * @return the namePackage
-	 */
-	public String getNamePackage() {
-		return namePackage;
-	}
 
-	/**
-	 * @param namePackage the namePackage to set
-	 */
-	public void setNamePackage(String namePackage) {
-		this.namePackage = namePackage;
-	}
-	
 	
 }
