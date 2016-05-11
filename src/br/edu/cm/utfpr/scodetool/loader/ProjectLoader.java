@@ -12,5 +12,6 @@ import java.util.ArrayList;
  */
 public interface ProjectLoader {
     
-    public ArrayList<File> getSourceFiles(File rootDirectory, String patternLanguageExtension);
+    public ArrayList<File> getSourceFiles(File rootDirectory);
+    public ArrayList<File> findFilethroughADirectory(final File rootDirectory, final String pattern);
 }
