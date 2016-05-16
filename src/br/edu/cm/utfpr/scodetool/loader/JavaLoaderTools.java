@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.edu.cm.utfpr.scodetool.entities.JavaPackage;
+
 /**
  * @author Paulo
  *
@@ -49,5 +51,12 @@ public class JavaLoaderTools {
             e.printStackTrace();
         }
         return null;
+    }
+    
+    public static boolean containsPackage(ArrayList<JavaPackage> packages, JavaPackage pack) {
+    	for(JavaPackage jpack : packages) {
+    		if(jpack.getPackageName().equals(pack.getPackageName())) return true;
+    	}
+    	return false;
     }
 }
