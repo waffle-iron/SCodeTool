@@ -7,32 +7,45 @@ import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 
+import br.edu.cm.utfpr.scodetool.entities.JavaClass;
+import br.edu.cm.utfpr.scodetool.entities.JavaPackage;
+import br.edu.cm.utfpr.scodetool.entities.JavaProject;
 import br.edu.cm.utfpr.scodetool.entities.generics.Project;
-import br.edu.cm.utfpr.scodetool.entities.generics.SourceCode;
+
 
 /**
  * @author Paulo
  *
  */
-public class JavaLoader<S extends SourceCode, PA extends Package, PO extends Project>
+public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PROJECT extends JavaProject>
         implements
             ProjectLoader,
-            ProjectMounter<S, PA, PO> {
+            ProjectMounter<CLASS, PACKAGE, PROJECT> {
     private final String javaExtension = "(.*\\.java)";
-    @Override
-    public ArrayList<S> mountSourceCodes(ArrayList<File> files) {
+    
+    @SuppressWarnings("unchecked")
+	@Override
+    public ArrayList<CLASS> mountSourceCodes(ArrayList<File> files) {
         // TODO Auto-generated method stub
+        ArrayList<JavaClass> javaClasses = new ArrayList<JavaClass>();
+    	for(File file : files) {
+    		javaClasses.add(new JavaClass(file));
+    	}
+    	return (ArrayList<CLASS>) javaClasses;
+    }
+
+    @Override
+    public ArrayList<PACKAGE> mountPackages(ArrayList<CLASS> sourceCodes) {
+        // TODO Auto-generated method stub
+    	ArrayList<JavaPackage> packages = new ArrayList<JavaPackage>();
+    	for(JavaClass jclass : sourceCodes) {
+    		//if()
+    	}
         return null;
     }
 
     @Override
-    public ArrayList<PA> mountPackages(ArrayList<S> sourceCodes) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public PO mountProject(ArrayList<PA> packages) {
+    public PROJECT mountProject(ArrayList<PACKAGE> packages) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -79,7 +92,7 @@ public class JavaLoader<S extends SourceCode, PA extends Package, PO extends Pro
     }
 
     @Override
-    public PO execute(String Url) {
+    public PROJECT execute(String Url) {
         // TODO Auto-generated method stub
         File rootDirectory = new File(Url);
         ArrayList<File> sourceFiles = this.getSourceFiles(rootDirectory);
