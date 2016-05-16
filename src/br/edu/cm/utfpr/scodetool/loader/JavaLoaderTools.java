@@ -61,10 +61,24 @@ public class JavaLoaderTools {
     	return false;
     }
     
+    public static boolean containsJavaPackage(ArrayList<JavaPackage> packages, JavaClass javaClass) {
+    	for(JavaPackage pack : packages) {
+    		if(pack.getPackageName().equals(javaClass.getPackageName())) return true;
+    	}
+    	return false;
+    }
+    
     public static boolean containsJavaClass(ArrayList<JavaClass> javaClassList, JavaClass javaClass) {
     	for(JavaClass jclass : javaClassList) {
     		if(jclass.getClassName().equals(javaClass.getClassName())) return true;
     	}
     	return false;
+    }
+    
+    public static int getIndexOfPackage(ArrayList<JavaPackage> packages, JavaClass javaClass) {
+    	for(int i = 0; i < packages.size(); i++) {
+    		if(packages.get(i).getPackageName().equals(javaClass.getPackageName())) return i;
+    	}
+    	return -1;
     }
 }

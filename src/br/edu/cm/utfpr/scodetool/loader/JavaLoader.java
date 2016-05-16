@@ -39,7 +39,12 @@ public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PR
         // TODO Auto-generated method stub
     	ArrayList<JavaPackage> packages = new ArrayList<JavaPackage>();
     	for(JavaClass jclass : sourceCodes) {
-    		if(!JavaLoaderTools.containsPackage(packages,jclass))
+    		if(!JavaLoaderTools.containsJavaPackage(packages,jclass)) {
+    			packages.add(new JavaPackage(jclass));
+    		}
+    		else {
+    			
+    		}
     	}
         return null;
     }

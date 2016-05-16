@@ -13,6 +13,13 @@ public class JavaPackage extends Package {
 	
 	private ArrayList<JavaClass> classes;
 	
+	
+	public JavaPackage(JavaClass javaClass) {
+		this.setPackageName(javaClass.getPackageName());
+		this.classes = new ArrayList<JavaClass>();
+		this.classes.add(javaClass);
+	}
+	
 	/**
 	 * @return the classes
 	 */
