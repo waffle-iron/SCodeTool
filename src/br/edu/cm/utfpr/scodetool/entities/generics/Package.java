@@ -7,7 +7,7 @@ package br.edu.cm.utfpr.scodetool.entities.generics;
  * @author Paulo
  *
  */
-public class Package {
+public abstract class Package {
     private String packageName;
 
     /**

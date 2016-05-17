@@ -3,13 +3,17 @@
  */
 package br.edu.cm.utfpr.scodetool.entities.generics;
 
+import java.util.ArrayList;
+
 /**
  * @author Paulo
  *
  */
-public class SourceCode {
+public abstract class SourceCode {
     private String className;
     private String packageName;
+    private ArrayList<String> text;
+    
     /**
      * @return the className
      */
@@ -34,5 +38,11 @@ public class SourceCode {
     public void setPackageName(String packageName) {
         this.packageName = packageName;
     }
+	public ArrayList<String> getText() {
+		return text;
+	}
+	public void setText(ArrayList<String> text) {
+		this.text = text;
+	}
     
 }

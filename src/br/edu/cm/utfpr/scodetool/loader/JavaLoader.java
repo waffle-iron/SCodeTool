@@ -26,7 +26,9 @@ public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PR
 		// TODO Auto-generated method stub
 		ArrayList<JavaClass> javaClasses = new ArrayList<JavaClass>();
 		for (File file : files) {
-			javaClasses.add(new JavaClass(file));
+			JavaClass auxiliarJavaClass = new JavaClass(file);
+			auxiliarJavaClass.setText(JavaLoaderTools.loadText(file));
+			javaClasses.add(auxiliarJavaClass);
 		}
 		return (ArrayList<CLASS>) javaClasses;
 	}
