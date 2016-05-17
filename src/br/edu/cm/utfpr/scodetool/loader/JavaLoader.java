@@ -46,10 +46,12 @@ public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PR
 		return (ArrayList<PACKAGE>) packages;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public PROJECT mountProject(ArrayList<PACKAGE> packages) {
+	public PROJECT mountProject(PROJECT project,ArrayList<PACKAGE> packages) {
 		// TODO Auto-generated method stub
-		return null;
+		project.setPackages((ArrayList<JavaPackage>) packages);
+		return project;
 	}
 
 	@Override
@@ -91,13 +93,15 @@ public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PR
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public PROJECT execute(String Url) {
 		// TODO Auto-generated method stub
 		File rootDirectory = new File(Url);
-		ArrayList<File> sourceFiles = this.getSourceFiles(rootDirectory);
-
-		return null;
+		ArrayList<File> sourceFiles = getSourceFiles(rootDirectory);
+		ArrayList<JavaPackage> packages = (ArrayList<JavaPackage>) mountPackages(mountSourceCodes(sourceFiles));
+		JavaProject project = new JavaProject(Url,packages);
+		return (PROJECT) project;
 	}
 
 }

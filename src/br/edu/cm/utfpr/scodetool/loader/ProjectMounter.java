@@ -15,6 +15,6 @@ import java.util.ArrayList;
 public interface ProjectMounter<CLASS, PACKAGE, PROJECT> {
     public ArrayList<CLASS> mountSourceCodes(ArrayList<File> files);
     public ArrayList<PACKAGE> mountPackages(ArrayList<CLASS> sourceCodes);
-    public PROJECT mountProject(ArrayList<PACKAGE> packages);
+    public PROJECT mountProject(PROJECT project,ArrayList<PACKAGE> packages);
     public PROJECT execute(String Url);
 }
