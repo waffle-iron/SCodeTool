@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author batista
  *
  */
-public interface PreFilter {
+public interface PreFilterInterface {
 	public ArrayList<String> removeTermsByLength(ArrayList<String> text);
 	public ArrayList<String> applyCamelCase(ArrayList<String> text);
 	public ArrayList<String> removeDigit(ArrayList<String> text);

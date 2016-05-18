@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Paulo
  *
  */
-public interface ProjectLoader {
+public interface ProjectLoaderInterface {
     
     public ArrayList<File> getSourceFiles(File rootDirectory);
     public ArrayList<File> findFilethroughADirectory(final File rootDirectory, final String pattern);

@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaClass;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaPackage;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaProject;
-import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectLoader;
-import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectMounter;
+import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectLoaderInterface;
+import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectMounterInterface;
 
 
 /**
@@ -19,7 +19,7 @@ import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectMounter;
  *
  */
 public class JavaLoader<CLASS extends JavaClass, PACKAGE extends JavaPackage, PROJECT extends JavaProject>
-		implements ProjectLoader, ProjectMounter<CLASS, PACKAGE, PROJECT> {
+		implements ProjectLoaderInterface, ProjectMounterInterface<CLASS, PACKAGE, PROJECT> {
 	private final String javaExtension = "(.*\\.java)";
 
 	@SuppressWarnings("unchecked")
