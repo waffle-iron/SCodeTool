@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaClass;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaPackage;
 import br.edu.cm.utfpr.scodetool.entities.java.JavaProject;
+import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectLoader;
+import br.edu.cm.utfpr.scodetool.loader.Interface.ProjectMounter;
 
 
 /**

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.edu.cm.utfpr.scodetool.loader;
+package br.edu.cm.utfpr.scodetool.loader.Interface;
 
 import java.io.File;
 import java.util.ArrayList;
