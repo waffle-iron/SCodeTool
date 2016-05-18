@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import br.edu.cm.utfpr.scodetool.entities.JavaClass;
-import br.edu.cm.utfpr.scodetool.entities.JavaPackage;
+import br.edu.cm.utfpr.scodetool.entities.java.JavaClass;
+import br.edu.cm.utfpr.scodetool.entities.java.JavaPackage;
 
 /**
  * @author Paulo

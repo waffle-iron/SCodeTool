@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.edu.cm.utfpr.scodetool.entities;
+package br.edu.cm.utfpr.scodetool.entities.java;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -7,9 +7,9 @@ import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 
-import br.edu.cm.utfpr.scodetool.entities.JavaClass;
-import br.edu.cm.utfpr.scodetool.entities.JavaPackage;
-import br.edu.cm.utfpr.scodetool.entities.JavaProject;
+import br.edu.cm.utfpr.scodetool.entities.java.JavaClass;
+import br.edu.cm.utfpr.scodetool.entities.java.JavaPackage;
+import br.edu.cm.utfpr.scodetool.entities.java.JavaProject;
 
 
 /**
